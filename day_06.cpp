@@ -225,46 +225,187 @@ using namespace std;
 
 */
    
-   int main(){
+  //  int main(){
            
-           int n = 4;
+  //          int n = 4;
 
-           for (int i = 1; i <= n; i++)
-           {
-               //for space
-               for (int j = 1; j <= n-i; j++)
-               {
-                  cout<<" ";
-               }
-               // for star
-               for (int j = 1; j <= 2*i - 1; j++)
-               {
-                  cout<<"*";
-               }
+  //          for (int i = 1; i <= n; i++)
+  //          {
+  //              //for space
+  //              for (int j = 1; j <= n-i; j++)
+  //              {
+  //                 cout<<" ";
+  //              }
+  //              // for star
+  //              for (int j = 1; j <= 2*i - 1; j++)
+  //              {
+  //                 cout<<"*";
+  //              }
 
-               cout<<endl;
+  //              cout<<endl;
                
-           }
+  //          }
 
-           for (int i = n; i >= 1; i--)
-           {
-              // for space
+  //          for (int i = n; i >= 1; i--)
+  //          {
+  //             // for space
 
-              for (int j = 1; j <= n-i; j++)
-              {
-                  cout<<" ";
-              }
+  //             for (int j = 1; j <= n-i; j++)
+  //             {
+  //                 cout<<" ";
+  //             }
 
-              // for star
+  //             // for star
 
-              for (int j = 1; j <= 2*i - 1; j++)
-              {
-                     cout<<"*";
-              }
+  //             for (int j = 1; j <= 2*i - 1; j++)
+  //             {
+  //                    cout<<"*";
+  //             }
               
-              cout<<endl;  
-           }
+  //             cout<<endl;  
+  //          }
            
 
-      return 0;
-   }
+  //     return 0;
+  //  }
+
+
+/*
+   Q.10  butterfly pattern
+ */
+
+// int main(){
+//      int n =4;
+     
+//      // half upper portion
+
+//      for (int i = 1; i <= n; i++)
+//      {
+//          // for left side star
+//          for (int j = 1; j <= i; j++)
+//          {
+//             cout<<"*";
+//          }
+//          //for space
+//          for (int j = 1; j <= 2*(n-i); j++)
+//          {
+//             cout<<" ";
+//          }
+//          // for right side star
+//          for (int j = 1; j <= i ; j++)
+//          {
+//             cout<<"*";
+//          }
+         
+//          cout<<endl;
+         
+          
+//      }
+     
+//     // half lower portion
+
+//     for (int i = n; i >= 1; i--)
+//     {
+//       // left side star
+
+//        for (int j = 1; j <= i; j++)
+//        {
+//           cout<<"*";
+//        }
+   
+    
+//      // for space
+
+//      for (int j = 1; j <= 2*(n-i); j++)
+//      {
+//          cout<<" ";
+//      }
+
+//      for (int j = 1; j <=i; j++)
+//      {
+//         cout<<"*";
+//      }
+     
+     
+
+//         cout<<endl;
+//     }
+
+
+//   return 0;
+// }
+
+/*
+    Q.11 
+           1
+           0 1
+           1 0 1
+           0 1 0 1
+           0 1 0 1 0
+
+*/
+
+// int main(){
+
+//             int n = 5;
+//             bool val = true;
+
+//             for (int i = 0; i < n; i++)
+//             {
+//                for (int j = 0; j <= i; j++)
+//                {
+//                     cout<<val;
+                    
+//                      val = !val;
+//                }
+//                 cout<<endl;
+//             }
+          
+
+//   return 0;
+// }
+
+
+/* 
+   Q.12 
+                  1
+               2  1  2
+            3  2  1  2  3
+         4  3  2  1  2  3  4
+      5  4  3  2  1  2  3  4  5
+*/
+
+
+int main(){
+
+       int n = 5;
+
+       for (int i = 1; i <= n; i++)
+       {
+          // for space
+          for (int j = 1; j <= n-i; j++)
+          {
+              cout<<" ";
+          }
+          //for num backward
+         
+         for (int j = i; j >= 1; j--)
+         {
+               cout<<j;
+         }
+         // for num forward
+
+         for (int j = 2; j <= i; j++)
+         {
+             cout<<j;
+         }
+         
+           cout<<endl;
+
+       }
+       
+
+
+
+  return 0;
+}
