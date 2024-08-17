@@ -164,44 +164,200 @@ using namespace std;
 /*  reverse a array with extra space */
 
 
-void printarr(int *arr , int n ){
+// void printarr(int *arr , int n ){
 
-     for (int i = 0; i < n; i++)
-     {
-         cout<<arr[i]<<" ";
-     }
+//      for (int i = 0; i < n; i++)
+//      {
+//          cout<<arr[i]<<" ";
+//      }
      
    
+// }
+
+
+
+//  int main(){
+     
+//      int arr[] = {2,3,4,5,6};
+     
+//      int n =sizeof(arr);
+
+//      int copy_arr[n];
+
+//      for (int i = 0; i < n; i++)
+//      {
+//         int j = n-i-1;
+//         copy_arr[i] = arr[j];
+//      }
+     
+//      for (int i = 0; i < n; i++)
+//      {
+//         arr[i] = copy_arr[i];
+//      }
+
+//      printarr(arr , n); 
+
+
+//   return 0;
+//  }
+
+
+
+
+/* reverse an array without extra space */         
+         
+
+
+
+// int main(){
+   
+//     int arr[] = {2,3,4,5,6};
+
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     int start = 0;
+//     int end = n-1;
+
+//     while (start < end)
+//     {
+//          int temp = arr[start];
+
+//          arr[start] = arr[end];
+
+//          arr[end] = temp;
+
+//          start++;
+//          end--;
+//     }
+      
+//    for (int i = 0; i < n; i++)
+//    {
+//          cout<<arr[i]<<" ";
+//    }
+    
+//    return 0;
+// }
+
+
+
+
+/*  binary search  */
+
+
+// int main(){
+     
+//      int arr[] = {2,5,6,8,9};
+
+//      // for binary search array should be sorted
+
+//      int n = sizeof(arr)/sizeof(arr[0]);
+
+//      int st = 0 , end = 0;
+       
+//        int key = 8;
+
+//        int idx;
+
+//      while (st <= end)
+//      {
+//            int mid =  (st+end)/2;
+           
+//            if (key == arr[mid] )
+//            {
+//               idx =  mid;
+//               break;
+//            }else if ( arr[mid] < key)
+//            {
+//               st = mid + 1;
+//            }else
+//            {
+//             end = mid-1;
+//            }
+
+//      }
+      
+//        cout<<idx<<endl;
+
+//    return 0;
+// }
+
+
+
+
+// using function
+
+
+int binarysearch (int *arr , int n , int key ){
+
+       int st = 0;
+       int end = n-1;
+
+      
+
+       while (st <= end)
+       {
+                int mid = (st+end)/2;
+
+            if (arr[mid] == key)
+            {
+                return mid;
+            }
+            else if (arr[mid] > key  )
+            {
+                 end = mid-1;
+            }
+            else
+            {
+                 st = mid+1;
+            }
+            
+       }
+       
+
+     return -1;
+}
+
+
+int main(){
+    
+    int arr[] = {4,5,6,7,8};
+
+    int n = sizeof(arr)/sizeof(int);
+
+      int key = 7;
+
+   int idx = binarysearch( arr , n , key);
+      
+      cout<<idx;
+     return 0 ;
 }
 
 
 
- int main(){
-     
+/* pointer arithmetic */
+
+int main(){
+   
      int arr[] = {2,3,4,5,6};
+
+     int *ptr = arr;
+
+     cout<<*ptr<<endl;
      
-     int n =sizeof(arr);
+     int *ptr1 = arr + 3;
 
-     int copy_arr[n];
+     cout<<*ptr1<<endl;
+   
+   //  addition and subtraction
 
-     for (int i = 0; i < n; i++)
-     {
-        int j = n-i-1;
-        copy_arr[i] = arr[j];
-     }
-     
-     for (int i = 0; i < n; i++)
-     {
-        arr[i] = copy_arr[i];
-     }
+    int sub = ptr1 - ptr ;
 
-     printarr(arr , n); 
+    cout<<sub<<endl;
+// addition have no meaning 
 
+  // comparison of pointer
+ 
+    cout<<(ptr1>ptr)<<endl;
 
-  return 0;
- }
-         
-         
-
-
-
+     return 0;
+}

@@ -1,9 +1,9 @@
 /*  pattern  */
 
 
-#include<iostream>
+// #include<iostream>
 
-using namespace std;
+// using namespace std;
 
 /* Q.1 
           *
@@ -335,8 +335,13 @@ using namespace std;
 //   return 0;
 // }
 
+
+#include<iostream>
+
+using namespace std;
+
 /*
-    Q.11 
+   day = 2             
            1
            0 1
            1 0 1
@@ -345,25 +350,44 @@ using namespace std;
 
 */
 
-// int main(){
-
-//             int n = 5;
-//             bool val = true;
-
-//             for (int i = 0; i < n; i++)
-//             {
-//                for (int j = 0; j <= i; j++)
-//                {
-//                     cout<<val;
-                    
-//                      val = !val;
-//                }
-//                 cout<<endl;
-//             }
+int main(){
+     int n = 5;
+     bool val = true;
+     for (int i = 0; i < n; i++)
+     {
+      // this for loop is for row
+      for (int j = 0; j <= i ; j++)
+      {
+        // this for loop is for col
+        cout<<val;  // print the value of val
+        val = !val; 
+      }
+      
+     }
           
 
-//   return 0;
-// }
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
@@ -376,36 +400,33 @@ using namespace std;
 */
 
 
-int main(){
+// int main(){
 
-       int n = 5;
+//        int n = 5;
 
-       for (int i = 1; i <= n; i++)
-       {
-          // for space
-          for (int j = 1; j <= n-i; j++)
-          {
-              cout<<" ";
-          }
-          //for num backward
+//        for (int i = 1; i <= n; i++)
+//        {
+//           // for space
+//           for (int j = 1; j <= n-i; j++)
+//           {
+//               cout<<" ";
+//           }
+//           //for num backward
          
-         for (int j = i; j >= 1; j--)
-         {
-               cout<<j;
-         }
-         // for num forward
+//          for (int j = i; j >= 1; j--)
+//          {
+//                cout<<j;
+//          }
+//          // for num forward
 
-         for (int j = 2; j <= i; j++)
-         {
-             cout<<j;
-         }
+//          for (int j = 2; j <= i; j++)
+//          {
+//              cout<<j;
+//          }
          
-           cout<<endl;
+//            cout<<endl;
 
-       }
-       
+//        }
 
-
-
-  return 0;
-}
+//   return 0;
+// }
