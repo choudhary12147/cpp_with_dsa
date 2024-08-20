@@ -252,7 +252,7 @@ using namespace std;
 
 //      int n = sizeof(arr)/sizeof(arr[0]);
 
-//      int st = 0 , end = 0;
+//      int st = 0 , end = n-1;
        
 //        int key = 8;
 
