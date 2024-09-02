@@ -78,8 +78,50 @@ using namespace std;
 
 
 /*
-   
+
+   Q.  memory leaking :- A memory leak occurs when programmer create a memory in a heap and forget to delete it.
+    leads to reduced performance due to depletion of available memory. 
+
 */
 
+  
+
+  /*
+         2D dynamic array
+  */
+
+int main(){
+
+     int row, col;
+
+     cout<<"enter rows: ";
+     cin>>row>>col;
+
+     int **matrix = new int*[row];
+
+     for (int i = 0; i < row; i++)
+     {
+             matrix[i] = new int[col];
+     }
+      
+       // store the value in the array
+         
+         int x = 1;
+
+       for (int i = 0; i <row ; i++)
+       {
+            for (int j = 0; j < col; j++)
+            {
+                matrix[i][j] = x++;
+
+                cout<<matrix[i][j]<<" ";
+            }
+            
+            cout<<endl;
+       }
+       
+
+    return 0;
+}
 
 
