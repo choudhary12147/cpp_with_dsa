@@ -256,3 +256,105 @@ using namespace std;
 
 
 
+// int main(){
+
+//       vector <vector<int>> v = {{1,2,3},{4,5,6},{7,8,9}};
+      
+//       for (int i = 0; i < v.size(); i++)
+//       {
+//          for (int j = 0; j < v[i].size(); j++)
+//          {
+//               cout<<v[i][j];
+//          }
+
+//          cout<<endl;
+         
+//       }
+      
+//   return 0;
+// }
+
+
+
+
+
+
+
+
+//  int main(){
+     
+//      vector <int> v;
+
+//      for (int i = 0; i < 5; i++)
+//      {
+//         v.push_back(i);
+//      }
+     
+
+//       cout<<v.size()<<" "<<v.capacity();
+
+//      return 0;
+//  }
+
+
+/*
+       Question 1 : You have a set of integers, which originally contains all the numbers
+                   from 1 to n. Unfortunately, due to some error, one of the numbers in s got duplicated
+                   to another number in the set, which results in repetition of one number and loss of
+                   another number.
+                   You are given an integer array nums representing the data status of this set after the 
+                  error.
+                   Find the number that occurs twice and the number that is missing and return them in
+                   the form of an array. 
+                   Example :
+                   Input: nums = [1,2,2,4]
+                   Output: [2,3]
+*/
+
+// vector<int>  findErrorsum(vector<int>& nums){
+        
+//         vector<int> ans;  // this will store the duplicate and the missing numbers
+//         int n = nums.size();
+
+//         // create a vector to keep track of which numbers are present 
+
+//         vector<int> ispresent(n+1, false);
+
+//         // loop through the input array to find the duplicate number
+
+//         for (int i = 0; i < n; i++)
+//         {
+//             if (ispresent[nums[i]])
+//             {
+//                   ans.push_back(nums[i]); // found the duplicate number 
+//             }
+//             ispresent[num[i]] = true;  // mark the number as present
+//         }
+
+//         // loop to find the missing number 
+
+//         for (int i = 1; i <= n; i++)
+//         {
+//             if (!ispresent[i])
+//             {
+//                   ans.push_back(i);
+//                   break;
+//             }
+            
+//         }
+        
+         
+
+// }
+
+
+
+
+
+// int main(){
+
+//              vector<int> nums = {1,2,2,4};
+//              vector<int> result = findErrorsum(nums);
+  
+//   return 0;
+// }
