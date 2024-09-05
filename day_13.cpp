@@ -111,32 +111,121 @@ using namespace std;
 */
 
 
-int diagonalsum(int matrix[3][3],int n){
+// int diagonalsum(int matrix[3][3],int n){
 
-        int sum = 0;
+//         int sum = 0;
 
-        for (int i = 0; i < n; i++)
-        {
-              sum+= matrix[i][i];
-              if (i != n-i-1)
-              {
-                  sum+= matrix[i][n-i-1];
-              }
+//         for (int i = 0; i < n; i++)
+//         {
+//               sum+= matrix[i][i];
+//               if (i != n-i-1)
+//               {
+//                   sum+= matrix[i][n-i-1];
+//               }
               
               
-        }
+//         }
 
-        return sum;
+//         return sum;
         
 
+// }
+
+
+// int main(){
+
+//     int matrix[3][3] = { {1,2,3},{4,5,6},{7,8,9}};
+     
+//      cout<<diagonalsum(matrix,3)<<endl;
+     
+//     return 0;
+// }
+
+
+
+
+/*
+     search in sorted 2D array using bruteforce approch.
+*/
+
+
+
+// void searchbybruteforce(int arr[3][3] , int key){
+               
+//                for (int i = 0; i < 3; i++)
+//                {
+//                      for (int j = 0; j < 3; j++)
+//                      {
+//                           if (arr[i][j] == key )
+//                           {
+//                                cout<<i<<" "<<j<<endl;
+//                           }
+                          
+//                      }
+                     
+//                }
+               
+// }
+
+// int main(){
+
+//         int arr[3][3] ={{1,2,3},{4,5,6},{7,8,9}};
+
+//         int key = 6;
+
+//         searchbybruteforce(arr,key);
+
+//     return 0;
+// }
+
+
+
+/*
+    search in sorted 2D array using stair case search 
+*/
+
+
+bool search(int mat[][4], int n , int m , int key){
+        
+        int i = 0 , j =  m -1;
+
+          while (i < n && j >= 0)
+          {
+               if (mat[i][j] == key)
+               {
+                     cout<<"element is at ("<<i<<","<<j<<")"<<endl;
+                     return true;
+
+               }else if (mat[i][j] > key)
+               {
+                      j--;   
+                      //left
+               }else
+               {
+                   i++;
+                   //down
+               }
+               
+         }
+         cout<<"key not found"<<endl;
+         return false;          
 }
+
+
+
 
 
 int main(){
 
-    int matrix[3][3] = { {1,2,3},{4,5,6},{7,8,9}};
-     
-     cout<<diagonalsum(matrix,3)<<endl;
-     
+        int matrix[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+           
+           int key = 10;
+
+          if (search(matrix,4,4,key))
+          {
+                 cout<<"element found"<<endl;
+          }  cout<<"element is not found"<<endl;
+           
+           
     return 0;
 }
