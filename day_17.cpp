@@ -141,42 +141,57 @@ class student{
 
      /*copy constructor */
 
-     student( string name , int age){
+//      student( string name , int age){
               
-              this->name = name;
-              this->age = age;
-              cgpa = new int; //dynamic alloction
-               *cgpa = 77;
-     }
+//               this->name = name;
+//               this->age = age;
+//               cgpa = new int; //dynamic alloction
+//                *cgpa = 77;
+//      }
 
-       /* custom copy constructor */
+//        /* custom copy constructor */
 
-       student(student &orignal){
-             cout<<"copy..";
-             name = orignal.name;
-             age = orignal.age;
-             cgpa = orignal.cgpa;
-       }
+//        student(student &orignal){
+//              cout<<"copy..";
+//              name = orignal.name;
+//              age = orignal.age;
+//              cgpa = orignal.cgpa;
+//        }
 
-};
+// };
+
+// int main(){
+       
+//        student s1("sunil",23);
+       
+//        /* here the copy constructor is created*/
+//        student s2(s1);
+
+       
+       
+
+//        cout<<s2.name<<" "<<s2.age<<" "<<*s2.cgpa<<endl;
+
+//        // if we do change in cgpa of s2 then it will also change in s1
+
+//        *s2.cgpa = 80;
+       
+//        cout<<s1.name<<" "<<s1.age<<" "<<*s1.cgpa<<endl;
+   
+//        return 0;
+// }
+
+
+/*
+      destructor
+*/
+
+class 
+
+
 
 int main(){
-       
-       student s1("sunil",23);
-       
-       /* here the copy constructor is created*/
-       student s2(s1);
 
-       
-       
 
-       cout<<s2.name<<" "<<s2.age<<" "<<*s2.cgpa<<endl;
-
-       // if we do change in cgpa of s2 then it will also change in s1
-
-       *s2.cgpa = 80;
-       
-       cout<<s1.name<<" "<<s1.age<<" "<<*s1.cgpa<<endl;
-   
        return 0;
 }
