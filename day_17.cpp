@@ -510,40 +510,103 @@ using namespace std;
     multiple inheritance
 */
 
-class Teacher{
+// class Teacher{
 
-public:
+// public:
      
-     int salary;
-     string subject;
+//      int salary;
+//      string subject;
 
-};
+// };
 
-class Student{
+// class Student{
      
-     public: 
+//      public: 
        
-       int rollno;
-       float cgpa;
+//        int rollno;
+//        float cgpa;
 
-};
+// };
 
-class TA : public Teacher,public Student{
-     public:
+// class TA : public Teacher,public Student{
+//      public:
 
-        string name;
-};
+//         string name;
+// };
 
-int main(){
+// int main(){
      
-     TA s1;
-     TA t1;
+//      TA s1;
+//      TA t1;
 
-     s1.name = "sunil";
-     s1.cgpa = 7.5;
-     t1.name = "amit";
-     t1.subject = "c++";
-     cout<<"student name :"<<s1.name<<"student cgpa is :"<<s1.cgpa<<"teacher name "<<t1.name<<"techers subject "<<t1.subject<<endl;
+//      s1.name = "sunil";
+//      s1.cgpa = 7.5;
+//      t1.name = "amit";
+//      t1.subject = "c++";
+//      cout<<"student name :"<<s1.name<<"student cgpa is :"<<s1.cgpa<<"teacher name "<<t1.name<<"techers subject "<<t1.subject<<endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+/*
+       hierarchial inheritance
+*/
+
+// class animal{
+
+//       public:     
+//          void eat(){
+//             cout<<"eating"<<endl;
+//          }
+//          void breath(){
+//             cout<<"breathing"<<endl;
+//          }
+// };
+
+
+// class bird : public animal{
+       
+//        public:
+//        void fly(){
+//         cout<<"flying"<<endl;
+//        }
+
+// };
+
+// class fish : public animal{
+//         public:
+//         void swim(){
+//             cout<<"swiming"<<endl;
+//         }
+// };
+
+// class mammmel : public animal{
+
+//      public:  
+//        void walk(){
+//           cout<<"walking"<<endl;
+//        }
+// };
+
+// int main(){
+       
+
+//         mammmel dog;
+
+//         dog.eat();
+//         dog.walk();
+
+//     return 0;
+// }
+
+
+
+/*
+   
+   encapsulation -> it is wrap up of data & member functions(methods) in a single unit.
+
+                   it also implement data hiding
+
+*/
+
