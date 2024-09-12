@@ -342,47 +342,208 @@ using namespace std;
    destructor -> deallocate memory from heap  
 */
 
-class car{
+// class car{
  
-   public:
+//    public:
       
-      string name;
-      string color;
-      int *mileage;
+//       string name;
+//       string color;
+//       int *mileage;
 
-        car(string name , string color ){
+//         car(string name , string color ){
             
-             this->name = name;
-             this->color = color;
+//              this->name = name;
+//              this->color = color;
 
-             mileage = new int;
+//              mileage = new int;
                
-               *mileage = 20;
+//                *mileage = 20;
 
 
-        }
+//         }
      
-     ~car(){
-           cout<<"delete the heep memory alloction\n";
+//      ~car(){
+//            cout<<"delete the heep memory alloction\n";
              
-             if (mileage != NULL)
-             {
-                 delete mileage;
-                 mileage = NULL;  
-             }
+//              if (mileage != NULL)
+//              {
+//                  delete mileage;
+//                  mileage = NULL;  
+//              }
              
-     }
+//      }
  
 
+
+// };
+
+
+// int main(){
+
+//     car c1("alto","black");
+       
+//        cout<<c1.name<<"\n"<<c1.color<<"\n"<<*c1.mileage<<endl;
+
+//     return 0;
+// }
+
+
+/*
+      inheritance  -> when properties and member function of base are passed on to the derived class.
+*/
+
+  
+  /*
+       base class /super class/ parent class(class A)
+             
+             .
+             .
+             .
+             inherit the properties from base class
+             .
+             .
+             .
+                         
+       derived class / sub class / child class(class B)
+  */
+
+
+// class animal{
+    
+//     public: 
+//      string color;
+
+//      void eat(){
+//         cout<<"eats\n";
+//      }
+
+//      void breathe(){
+//         cout<<"breathes\n";
+//      }
+
+// };
+
+// class fish : protected animal{
+
+//     public:
+      
+//       int fins;
+//       void swim(){
+//         cout<<"swim\n";
+//       }
+      
+
+// };
+
+
+
+// int main(){
+
+//        animal a1;
+
+//        a1.color = "black";
+
+//       fish f1;
+
+//       f1.color = " black";
+
+//       cout<<f1.color<<endl;
+
+//     return 0;
+// }
+
+/*
+   multi-level  inheritance
+*/
+
+// class animal{
+     
+//      public:
+       
+//        void eat(){
+               
+//                cout<<"eating \n";
+//        }
+        
+//         void breath(){
+                  
+//                   cout<<"breath\n";
+//         }
+
+// };
+
+// class mammel :public animal{
+  
+//      public:
+
+//        string blodtype = "warm";
+
+//        mammel(){
+             
+//              this->blodtype = "warm";
+//        }           
+
+// };
+
+// class dog: public mammel{
+//           public:
+
+//           void tail(){
+//             cout<<"dog is tailing\n";
+//           }
+// };
+
+// int main(){
+            
+//             dog d1;
+
+//             d1.eat();
+//             d1.tail();
+//             cout<<d1.blodtype<<endl;
+
+//     return 0;
+// }
+
+
+
+/*
+    multiple inheritance
+*/
+
+class Teacher{
+
+public:
+     
+     int salary;
+     string subject;
 
 };
 
+class Student{
+     
+     public: 
+       
+       int rollno;
+       float cgpa;
+
+};
+
+class TA : public Teacher,public Student{
+     public:
+
+        string name;
+};
 
 int main(){
+     
+     TA s1;
+     TA t1;
 
-    car c1("alto","black");
-       
-       cout<<c1.name<<"\n"<<c1.color<<"\n"<<*c1.mileage<<endl;
+     s1.name = "sunil";
+     s1.cgpa = 7.5;
+     t1.name = "amit";
+     t1.subject = "c++";
+     cout<<"student name :"<<s1.name<<"student cgpa is :"<<s1.cgpa<<"teacher name "<<t1.name<<"techers subject "<<t1.subject<<endl;
 
     return 0;
 }
