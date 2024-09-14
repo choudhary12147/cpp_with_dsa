@@ -138,7 +138,7 @@ using namespace std;
 
 /*
   vectors like dynamic array they can resize dynamically at runtime . They are stored  contiguously in memory.
-    vectors are also called sequence container
+    vectors are also called sequence container.
 */
 
 // intialization of vectors
@@ -274,13 +274,6 @@ using namespace std;
 //   return 0;
 // }
 
-
-
-
-
-
-
-
 //  int main(){
      
 //      vector <int> v;
@@ -311,50 +304,61 @@ using namespace std;
                    Output: [2,3]
 */
 
-// vector<int>  findErrorsum(vector<int>& nums){
-        
-//         vector<int> ans;  // this will store the duplicate and the missing numbers
-//         int n = nums.size();
 
-//         // create a vector to keep track of which numbers are present 
+vector<int> findErrorsum( vector<int> &nums ){
 
-//         vector<int> ispresent(n+1, false);
+      int n = nums.size();
 
-//         // loop through the input array to find the duplicate number
+      vector<int> ans ;
 
-//         for (int i = 0; i < n; i++)
-//         {
-//             if (ispresent[nums[i]])
-//             {
-//                   ans.push_back(nums[i]); // found the duplicate number 
-//             }
-//             ispresent[num[i]] = true;  // mark the number as present
-//         }
+        vector<bool> ispresent(n+1,false);
 
-//         // loop to find the missing number 
+          // this for loop calculate the duplicate element
 
-//         for (int i = 1; i <= n; i++)
-//         {
-//             if (!ispresent[i])
-//             {
-//                   ans.push_back(i);
-//                   break;
-//             }
+        for (int i = 0; i < n; i++)
+        {
+               if (ispresent[nums[i]])
+               {
+                  ans.push_back(nums[i]);
+               }else{
+                   ispresent[nums[i]] = true;
+               }
+
+               
+        }
+
+        //  this for loop calculate the miss element
+
+        for (int i = 1; i < n+1; i++)
+        {
+            if (!ispresent[nums[i]])
+            {
+                 ans.push_back(nums[i]);
+                 break;
+            }
             
-//         }
+        }
         
-         
-
-// }
-
-
+        return ans;
+            
+}
 
 
+int main(){
 
-// int main(){
+             vector<int> nums = {1,2,2,4};
+             vector<int> result = findErrorsum(nums);
 
-//              vector<int> nums = {1,2,2,4};
-//              vector<int> result = findErrorsum(nums);
+             for (int i = 0; i < result.size(); i++)
+             {
+                 cout<<result[i]<<" ";
+             }
+             
   
-//   return 0;
-// }
+  return 0;
+}
+
+
+
+
+
