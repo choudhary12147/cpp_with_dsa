@@ -61,33 +61,168 @@ using namespace std;
 */
 
 
-void toupper(char word[] , int n){
+// void toupper(char word[] , int n){
          
-         for (int i = 0; i < n; i++)
-         {
-             if (ch >= 'A' && ch<= 'Z')
-             {
-                  continue;
-             }else
-             {
-                word[i] = ch - 'a' +'A';
+//          for (int i = 0; i < n; i++)
 
-             }
+//           //   char ch = word[i];
+
+//          {
+//              if (word[i] >= 'A' && word[i] <= 'Z')
+//              {
+//                   continue;
+//              }else
+//              {
+//                 word[i] = word[i] - 'a' +'A';
+
+//              }
              
              
-         }
+//          }
          
-}
+// }
+
+// int main(){
+
+//      char word[] = "ApPle";
+
+//      toupper(word,strlen(word));
+
+//       cout<<word<<endl;
+
+//     return 0;
+// }
 
 
+/*
+      reverse char array
+*/
+
+// void reverse(char word[] , int n){
+
+//      int st = 0;
+//      int end = n-1;
+
+
+//      while (st<=end)
+//      {
+//             int temp = word[st];
+
+//             word[st] = word[end];
+//             word[end] = temp;
+                
+//                 st++;
+//                 end--;
+
+//      }
+     
+// }
+
+
+// int main(){
+   
+//    char word[] = "code";
+
+//    reverse(word,strlen(word));
+
+//      cout<<word<<endl;
+
+//      return 0;
+// }
+
+
+/*
+     palindrom
+*/
+
+
+//  bool isPalindrom(char word[] , int n){
+
+          
+//               int st = 0;
+//             int end = n-1;
+
+//             while (st<=end)
+//             {
+//                  if (word[st] != word[end])
+//                  {
+//                       cout<<"not a palindrom"<<endl;
+                    
+
+//                          return false;
+//                  }
+                    
+//             }
+//             cout<<"palindrom";
+//             return true;
+                     
+//  }
+
+
+
+// int main(){
+       
+//        char word[] = "desi";
+
+//     isPalindrom(word,strlen(word));
+
+//      return 0;
+// }
+
+/*
+   cstring function
+*/
+
+// int main(){
+
+//       /*
+//         strcpy
+//       */
+         
+//          char name[11];
+
+//          strcpy(name,"sunil");
+         
+//          /* concatenation  */
+
+//           strcat(name,"dhayal");
+
+//           /*  str comparison */
+
+//            int n =  strcmp(name,"sunildhayal");
+
+//           //  cout<<n<<endl;
+//            cout<<name[10];
+
+//            cout<<name; 
+
+
+//      return 0;
+// }
+
+/*
+   string input nd output 
+*/
 
 int main(){
 
-     char word[] = "ApPle";
 
-     toupper(word,strlen(word));
+/*
+     input
+*/
+      string str;
+      
+      getline(cin,str);
 
-      cout<<word<<endl;
+      cout<<str;
 
-    return 0;
+      /* output for every charcter sepreatly*/
+
+      for (int i = 0; i < str.length(); i++)
+      {
+            cout<<str[i]<<"-";
+      }
+      
+
+     return 0;
 }
