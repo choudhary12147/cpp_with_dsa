@@ -32,27 +32,86 @@ using namespace std;
 //   return 0;
 // }
 
+
+
 /*
     check if odd or even  using bit  manipulation
 
 */
 
+
+
+// int main(){
+
+//     int n ;
+
+//     cout<<"enter the value of n :"<<endl;
+//     cin>>n;
+
+//     if ((n&1) == 0)
+//     {
+//        cout<<"number is even"<<endl;
+//     }else
+//     {
+//       cout<<"number is odd"<<endl;
+//     }
+    
+//   return 0;
+// }
+
+
+/*
+     get ith bit is one or zero
+*/
+
+
+
+// int checkbit(int num , int ith){
+       
+//        int bitmask = 1<<ith;
+             
+//              if ((num&bitmask) == 0)
+//              {
+//                 cout<<"bit is zero "<<endl;
+//              }else
+//              {
+//               cout<<"bit is one "<<endl;
+//              }
+             
+// }
+
+
+// int main(){
+  
+//   int num , ith;
+     
+//      cin>>num;
+//      cin>>ith;
+
+//    cout<<checkbit(num,ith)<<endl;
+
+//   return 0;
+// }
+
+/*
+  mainpulate ith bit of num
+*/
+
+int setithbit(int num , int i){
+             
+             int bitmask = 1<<i;
+
+             return num|bitmask;
+}
+
+
 int main(){
 
-    int n ;
+       int num,i;
 
-    cout<<"enter the value of n :"<<endl;
-    cin>>n;
+        cin>>num>>i;
+       cout<<setithbit(num,i);
 
-    if ((n&1) == 0)
-    {
-       cout<<"number is even"<<endl;
-    }else
-    {
-      cout<<"number is odd"<<endl;
-    }
-    
-    
 
   return 0;
 }
