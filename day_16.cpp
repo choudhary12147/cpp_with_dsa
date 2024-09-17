@@ -97,21 +97,107 @@ using namespace std;
   mainpulate ith bit of num
 */
 
-int setithbit(int num , int i){
-             
-             int bitmask = 1<<i;
 
-             return num|bitmask;
+// int setithbit(int num , int i){
+             
+//              int bitmask = 1<<i;
+
+//              return num|bitmask;
+// }
+
+// int main(){
+
+//        int num,i;
+
+//         cin>>num>>i;
+//        cout<<setithbit(num,i);
+//   return 0;
+// }
+
+/*
+    clear ith bit
+
+*/
+
+// int clearbit(int num , int ith){
+
+//         int bitmask = ~(1<<ith);
+
+//         return num&bitmask;  
+  
+
+// }
+
+// int main(){
+         
+//          int num , ith;
+//          cin>>num>>ith;
+//          cout<<clearbit(num,ith)<<endl;
+
+// }
+
+
+
+/*
+   power of 2
+*/
+
+
+
+// bool checkpower(int num){
+         
+//          if ((num & (num-1)) == 0)
+//          {
+//               return 1;
+//          }else
+//          {
+//           return 0;
+//          }
+         
+// }
+
+// int main(){
+     
+//      int num;
+
+//      cin>>num;
+
+//      if(checkpower(num)){
+//       cout<<"yes";
+//      }else
+//      {
+//       cout<<"not";
+//      }
+     
+
+//   return 0;}
+
+
+/*
+     update ith bit in num
+     1. num = 7 ,i = 2, val = 0;
+     2. num = 7 , i = 3, val = 1;
+*/
+
+
+int update1(int num , int ith){
+          
+          int bitmask = ~(1<<ith);
+
+          return num&bitmask;
 }
 
+int update2(int num , int ith){
+
+        int bitmask = 1<<ith;
+
+        return num|bitmask; 
+}
 
 int main(){
 
-       int num,i;
-
-        cin>>num>>i;
-       cout<<setithbit(num,i);
-
-
-  return 0;
+     int num = 7;
+      
+      cout<<update1(num,2)<<endl;
+      cout<<update2(num,3)<<endl;
 }
