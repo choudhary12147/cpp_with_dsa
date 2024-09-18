@@ -180,24 +180,171 @@ using namespace std;
 */
 
 
-int update1(int num , int ith){
+
+// int update1(int num , int ith){
           
-          int bitmask = ~(1<<ith);
+//           int bitmask = ~(1<<ith);
 
-          return num&bitmask;
+//           return num&bitmask;
+// }
+
+// int update2(int num , int ith){
+
+//         int bitmask = 1<<ith;
+
+//         return num|bitmask; 
+// }
+
+// int main(){
+
+//      int num = 7;
+      
+//       cout<<update1(num,2)<<endl;
+//       cout<<update2(num,3)<<endl;
+// }
+
+
+
+/*
+      clear last ith bit of a number
+      num = 15,i = 2;
+*/
+
+
+
+// int clearlasti(int num ,int ith){
+             
+//               int bitmask =  (~0)<<ith;
+
+//               return bitmask & num ;
+
+// }
+
+
+// int main(){
+//          int num = 15;
+//          int i = 2;
+           
+//           cout<<clearlasti(num,i)<<endl;;
+
+//     return 0;
+// }
+
+
+
+
+/*
+   count setbit
+*/
+
+
+
+
+// int countsetbit(int num){
+
+//        int count = 0;
+//         while (num > 0)
+//         {
+//              int l_digit = num&1;
+
+//                count += l_digit;
+//                num = num>>1;
+ 
+//         }
+        
+
+//           return count; 
+
+// }
+
+// int main(){
+          
+//           int num = 10;
+
+//         cout<<countsetbit(num)<<endl;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+/*
+     fastexpo
+*/
+
+
+
+
+// int fastexpo(int n , int x){
+           
+//            int ans = 1;
+
+//            while (n>0)
+//            {
+//                 int lastBit = n&1;
+                
+//                 if (lastBit)
+//                 {
+//                     ans = ans*x;
+//                 }
+                
+//                 x = x*x;
+                
+//                 n = n>>1;
+//            }
+
+//            cout<<ans;
+//            return ans;
+           
+// }
+
+// int main(){
+    
+//     int n = 5;
+//     int x  = 3;
+
+//     fastexpo(n,x);
+
+//     return 0;
+// }
+
+
+
+/*
+  Question 1 : Write a Function to clear the range of bits from i to j in a given number. (i 
+                & j are counted backwards from the right end of the number)
+                Examples :
+                 Input : num = 15, i = 1, j = 3 
+                 Output : 1
+                
+                Explanation :
+                     15 in binary form is => 00001111 [i=1st & j=3rd bit underlined] 
+                         After bits are cleared, number will become 00000001
+                  Input : num = 31, i = 1, j = 3
+                 Output : 17
+
+                   Note - Think about what type of bit mask is needed. It can also be a combination of 2 
+                               numbers
+
+*/
+
+
+int clearrangebit(int num ){
+          
+             int bitmask = ~(7<<1);
+                
+                return bitmask&num;
+
 }
 
-int update2(int num , int ith){
-
-        int bitmask = 1<<ith;
-
-        return num|bitmask; 
-}
 
 int main(){
+          
+          cout<<clearrangebit(31)<<endl;
 
-     int num = 7;
-      
-      cout<<update1(num,2)<<endl;
-      cout<<update2(num,3)<<endl;
+    return 0;
 }
