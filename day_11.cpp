@@ -55,47 +55,45 @@ using namespace std;
 
 
 
-// void maxsum(int arr[] , int n){
+void maxsum(int arr[] , int n){
 
            
-//            int maxs = INT16_MIN; 
+           int maxs = INT16_MIN; 
 
-//            for (int start = 0; start < n; start++)           
-//            {
+           for (int start = 0; start < n; start++)           
+           {
                 
-//                   int currs = 0;
+                  int currs = 0;
 
-//                 for (int end  = start; end < n ; end++)
-//                 {
-//                       currs+= arr[end];
+                for (int end  = start; end < n ; end++)
+                {
+                      currs+= arr[end];
 
-//                      maxs = max(currs, maxs);
-//                 }
+                     maxs = max(currs, maxs);
+                }
 
               
-//            }
+           }
 
-//            cout<<maxs<<" ";
+           cout<<maxs<<" ";
            
-// }
+}
 
 
 
 
 
-// int main(){
+int main(){
      
-//      int arr[] = {2,3,4,5,6,7};
+     int arr[] = {2,3,4,5,6,7};
 
-//      int n = sizeof(arr)/sizeof(arr[0]);
+     int n = sizeof(arr)/sizeof(arr[0]);
 
-//       // printsubarr( arr , n);
+      // printsubarr( arr , n);
+         maxsum(arr,n);
 
-//       maxsum( arr , n);
-
-
-//     return 0;
-// }
+    return 0;
+}
 
 
 
@@ -105,44 +103,44 @@ using namespace std;
 
 
 
-void maxsum(int arr[] , int n){
+// void maxsum(int arr[] , int n){
             
-            int maxs = INT16_MIN;
+//             int maxs = INT16_MIN;
 
-            int currs = 0;
+//             int currs = 0;
 
-            for (int i = 0; i < n; i++)
-            {
-                currs+= arr[i];
+//             for (int i = 0; i < n; i++)
+//             {
+//                 currs+= arr[i];
                       
-                      maxs = max( maxs , currs);
+//                       maxs = max( maxs , currs);
 
-                   if (currs < 0)
-                   {
-                      currs = 0;
-                   }
+//                    if (currs < 0)
+//                    {
+//                       currs = 0;
+//                    }
                    
 
-            }
+//             }
 
-            // max sum of subarray 
+//             // max sum of subarray 
 
-            cout<<currs<<" "<<endl;
+//             cout<<currs<<" "<<endl;
             
 
-}
+// }
 
 
-int main(){
+// int main(){
    
-   int arr [] = {2,-3,6,-5,4,2};
+//    int arr [] = {2,-3,6,-5,4,2};
     
-    int n = sizeof(arr)/sizeof(arr[0]);
+//     int n = sizeof(arr)/sizeof(arr[0]);
 
-   maxsum(arr , n);
+//    maxsum(arr , n);
 
-  return 0;
-}
+//   return 0;
+// }
 
 
 
@@ -179,6 +177,8 @@ int main(){
 
 // }
 
+
+
 // int main(){
    
 //    int price[] = {7,1,5,3,6,4};
@@ -190,6 +190,9 @@ int main(){
 
 //   return 0;
 // }
+
+
+
 
 
 
