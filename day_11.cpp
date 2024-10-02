@@ -10,7 +10,8 @@ using namespace std;
 //           {
 //              for (int end = start; end < n; end++)
 //              {
-//                 // cout<<"("<<start<<","<<end<<")";
+
+//                 cout<<"("<<start<<","<<end<<")";
                   
 //                   // print subarray
 
@@ -37,6 +38,15 @@ using namespace std;
 
 // }
 
+
+// int main(){
+
+//          int arr[] = {1,2,3,4,5};
+
+//          int n = sizeof(arr)/sizeof(arr[0]);
+
+//          printsubarr(arr,n);
+// }
 
 
 
@@ -95,44 +105,44 @@ using namespace std;
 
 
 
-// void maxsum(int arr[] , int n){
+void maxsum(int arr[] , int n){
             
-//             int maxs = INT16_MIN;
+            int maxs = INT16_MIN;
 
-//             int currs = 0;
+            int currs = 0;
 
-//             for (int i = 0; i < n; i++)
-//             {
-//                 currs+= arr[i];
+            for (int i = 0; i < n; i++)
+            {
+                currs+= arr[i];
                       
-//                       maxs = max( maxs , currs);
+                      maxs = max( maxs , currs);
 
-//                    if (currs < 0)
-//                    {
-//                       currs = 0;
-//                    }
+                   if (currs < 0)
+                   {
+                      currs = 0;
+                   }
                    
 
-//             }
+            }
 
-//             // max sum pf subarray 
+            // max sum of subarray 
 
-//             cout<<currs<<" "<<endl;
+            cout<<currs<<" "<<endl;
             
 
-// }
+}
 
 
-// int main(){
+int main(){
    
-//    int arr [] = {2,-3,6,-5,4,2};
+   int arr [] = {2,-3,6,-5,4,2};
     
-//     int n = sizeof(arr)/sizeof(arr[0]);
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-//    maxsum(arr , n);
+   maxsum(arr , n);
 
-//   return 0;
-// }
+  return 0;
+}
 
 
 
@@ -189,55 +199,55 @@ using namespace std;
 */
 
 
-void trap( int height[] , int n){
+// void trap( int height[] , int n){
 
-    int leftmax[20000] , rightmax[20000];
+//     int leftmax[20000] , rightmax[20000];
 
-     leftmax[0] = height[0];
+//      leftmax[0] = height[0];
 
-     rightmax[0] = height[n-1];
+//      rightmax[0] = height[n-1];
 
       
-      for (int i = 1; i < n; i++)
-      {
-          leftmax[i] = max(leftmax[i - 1] , height[ i - 1] );          
-      }
+//       for (int i = 1; i < n; i++)
+//       {
+//           leftmax[i] = max(leftmax[i - 1] , height[ i - 1] );          
+//       }
       
-      for (int i = n-2 ; i >= 0; i--)
-      {
-           rightmax[i] = max(rightmax[i+1] , height[i+1]);
-      }
+//       for (int i = n-2 ; i >= 0; i--)
+//       {
+//            rightmax[i] = max(rightmax[i+1] , height[i+1]);
+//       }
       
-      int waterTrapped = 0;
+//       int waterTrapped = 0;
 
-      for (int i = 0; i < n; i++)
-      {
-            int currWater = min(leftmax[i] , rightmax[i]) - height[i];
+//       for (int i = 0; i < n; i++)
+//       {
+//             int currWater = min(leftmax[i] , rightmax[i]) - height[i];
 
-            if (currWater > 0)
-            {
-                    waterTrapped+=currWater;
-            }
+//             if (currWater > 0)
+//             {
+//                     waterTrapped+=currWater;
+//             }
             
 
 
-      }
+//       }
       
 
-          cout<<"water trapped is "<<waterTrapped<<endl;
+//           cout<<"water trapped is "<<waterTrapped<<endl;
 
 
 
-}
+// }
 
 
 
-int main(){
+// int main(){
  
-  int height[] = {4,2,0,6,3,2,5};
+//   int height[] = {4,2,0,6,3,2,5};
 
-  int n = sizeof(height)/sizeof(height[0]);
+//   int n = sizeof(height)/sizeof(height[0]);
 
 
-    return 0;
-}
+//     return 0;
+// }
