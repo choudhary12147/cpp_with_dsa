@@ -7,44 +7,46 @@ using namespace std;
 
 // int main(){
 
-//     // char arr[] = {'a' , 'b' , 'c' ,'d','e' '\0'};
+//     char arr[] = {'a' , 'b' , 'c' ,'d','e','\0'};
 
-//     //   int n = sizeof(arr)/sizeof(arr[0]);
+//       int n = sizeof(arr)/sizeof(arr[0]);
 
-//     // for (int i = 0; i < n; i++)
-//     // {
-//     //      cout<<arr[i]<<" ";
-//     // }
+//       cout<<n<<endl;
 
-//     // cout<<arr;
+//     for (int i = 0; i < n; i++)
+//     {
+//          cout<<arr[i]<<" ";
+//     }
+
+//     cout<<arr;
 
 //     /*
 //         string literals in char arr
 //     */
     
 
-//        char name[] = "sunil";
+     //   char name[] = "sunil";
 
-//        int m = sizeof(name)/sizeof(name[0]);
+     //   int m = sizeof(name)/sizeof(name[0]);
 
-//        int n = strlen(name);
-//        cout<<n<<endl;
-//        cout<<m<<endl;
+     //   int n = strlen(name);
+     //   cout<<n<<endl;
+     //   cout<<m<<endl;
 
-//        cout<<name<<endl;
+     //   cout<<name<<endl;
 
-//        cout<<name[3]<<endl;
+     //   cout<<name[3]<<endl;
 
 //       /*
 //          input char array
 //       */
 
 
-//       //  char word[30];
+//        char word[30];
 
-//       //  cin>>word;   // ignore the words after the white space
+//        cin>>word;   // ignore the words after the white space
 
-//       //  cout<<word<<endl;
+//        cout<<word<<endl;
 
 //        char sentence[30];
 
@@ -81,6 +83,7 @@ using namespace std;
 //          }
          
 // }
+
 
 // int main(){
 
@@ -169,9 +172,13 @@ using namespace std;
 //      return 0;
 // }
 
+
+
 /*
    cstring function
 */
+
+
 
 // int main(){
 
@@ -189,9 +196,9 @@ using namespace std;
 
 //           /*  str comparison */
 
-//            int n =  strcmp(name,"sunildhayal");
+//            bool n =  strcmp(name,"sunildhayal");
 
-//           //  cout<<n<<endl;
+//            cout<<n<<endl;
 //            cout<<name[10];
 
 //            cout<<name; 
@@ -200,40 +207,44 @@ using namespace std;
 //      return 0;
 // }
 
+
+
 /*
    string input nd output 
 */
 
-// int main(){
 
 
-// /*
-//      input
-// */
-//       string str;
+int main(){
+
+
+/*
+     input
+*/
+      string str;
       
-//       getline(cin,str);
+      getline(cin,str);
 
-//       cout<<str;
+      cout<<str;
 
-//       /* output for every charcter sepreatly*/
+      /* output for every charcter sepreatly*/
 
-//      //  for (int i = 0; i < str.length(); i++)
-//      //  {
-//      //        cout<<str[i]<<"-";
-//      //  }
+      for (int i = 0; i < str.length(); i++)
+      {
+            cout<<str[i]<<"-";
+      }
 
-//      /* another way of output */
+     /* another way of output */
 
-//      for (char ch:str)
-//      {
-//           cout<<ch<<" ";
-//      }
+     for (char ch:str)
+     {
+          cout<<ch<<" ";
+     }
 
-//      cout<<endl;
+     cout<<endl;
      
-//      return 0;
-// }
+     return 0;
+}
 
 
 /*
