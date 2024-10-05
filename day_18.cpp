@@ -70,31 +70,95 @@ polymorphism -> ability of obj to take on different form. or behave in different
 */
 
 
-class parent{
-    public:
+// class parent{
+//     public:
       
-      void print(){
-        cout<<"print the parent fun"<<endl;
-      }
+//       void print(){
+//         cout<<"print the parent fun"<<endl;
+//       }
     
+// };
+
+// class child:public parent{
+
+//     public:
+
+//       void print(){
+//         cout<<"print the child fun"<<endl;
+//       }
+
+
+// };
+
+// int main(){
+
+//       child c1;
+//       c1.print();
+
+//     return 0;
+// }
+
+
+
+
+
+/*
+   2. Virtual Functions
+    
+    it is member function that you expect to be redefined in derived classes.
+
+     a. virtual fun is dynamic in nature.
+     b. defined by the keyword "virtual" inside the base class and always declared with a base class
+         and overridden in child class.
+     c. a virtual func is called during runtime.      
+*/
+
+
+
+
+
+class parent{
+
+public:
+
+  virtual void print(){
+    cout<<"parent fun called"<<endl;
+  }
+
 };
 
-class child:public parent{
+class child : public parent{
 
-    public:
+public:
 
       void print(){
-        cout<<"print the child fun"<<endl;
+          cout<<"child fun called"<<endl;
       }
 
-
 };
-
 
 int main(){
 
-      child c1;
-      c1.print();
+   child c1;
+   parent p1;
 
-    return 0;
+   p1.print();
+   c1.print();
+
+    parent *p2;
+    p2 = &c1;
+
+    p2->print();
+
+  return 0;
 }
+
+
+
+/*
+    Abstraction -> hiding all unnecessary details and show only the important parts.
+
+    Abstract class and virtual func  
+
+
+*/

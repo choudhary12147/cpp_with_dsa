@@ -287,50 +287,50 @@ using namespace std;
 // using function
 
 
-int binarysearch (int *arr , int n , int key ){
+// int binarysearch (int *arr , int n , int key ){
 
-       int st = 0;
-       int end = n-1;
+//        int st = 0;
+//        int end = n-1;
 
       
 
-       while (st <= end)
-       {
-                int mid = (st+end)/2;
+//        while (st <= end)
+//        {
+//                 int mid = (st+end)/2;
 
-            if (arr[mid] == key)
-            {
-                return mid;
-            }
-            else if (arr[mid] > key  )
-            {
-                 end = mid-1;
-            }
-            else
-            {
-                 st = mid+1;
-            }
+//             if (arr[mid] == key)
+//             {
+//                 return mid;
+//             }
+//             else if (arr[mid] > key  )
+//             {
+//                  end = mid-1;
+//             }
+//             else
+//             {
+//                  st = mid+1;
+//             }
             
-       }
+//        }
        
 
-     return -1;
-}
+//      return -1;
+// }
 
 
-int main(){
+// int main(){
     
-    int arr[] = {4,5,6,7,8};
+//     int arr[] = {4,5,6,7,8};
 
-    int n = sizeof(arr)/sizeof(int);
+//     int n = sizeof(arr)/sizeof(int);
 
-      int key = 7;
+//       int key = 7;
 
-   int idx = binarysearch( arr , n , key);
+//    int idx = binarysearch( arr , n , key);
       
-      cout<<idx;
-     return 0 ;
-}
+//       cout<<idx;
+//      return 0 ;
+// }
 
 
 

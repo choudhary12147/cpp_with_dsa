@@ -49,7 +49,7 @@ using namespace std;
 //            }
            
 //            // after the memory array is allocted in heap and not free by completed of func 
-//            // that's we should to delete it 
+//            // that'swhy  we should to delete it 
 
 //            delete [] ptr;
 
@@ -191,7 +191,7 @@ using namespace std;
 
 
 /*
-    Q. find if any pair in sorted vector has target sum.
+    Q. find if any pair in sorted vector has target sum = 9.
        input : arr[] = {2,7,11,15};
        output: [0,1]    
 */
@@ -203,7 +203,7 @@ using namespace std;
             
 //             int currsum = 0;
 
-//             vector<int>ans;
+//             vector<int> ans;
 
 //             while (st<end)
 //             {
@@ -215,7 +215,7 @@ using namespace std;
 //                     ans.push_back(end);
 //                     return ans;
 
-//                 }else if (currsum<target)
+//                 }else if (currsum < target)
 //                 {
 //                      st++;
 //                 }else

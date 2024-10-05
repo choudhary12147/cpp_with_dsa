@@ -215,36 +215,36 @@ using namespace std;
 
 
 
-int main(){
+// int main(){
 
 
-/*
-     input
-*/
-      string str;
+// /*
+//      input
+// */
+//       string str;
       
-      getline(cin,str);
+//       getline(cin,str);
 
-      cout<<str;
+//       cout<<str;
 
-      /* output for every charcter sepreatly*/
+//       /* output for every charcter sepreatly*/
 
-      for (int i = 0; i < str.length(); i++)
-      {
-            cout<<str[i]<<"-";
-      }
+//       for (int i = 0; i < str.length(); i++)
+//       {
+//             cout<<str[i]<<"-";
+//       }
 
-     /* another way of output */
+//      /* another way of output */
 
-     for (char ch:str)
-     {
-          cout<<ch<<" ";
-     }
+//      for (char ch:str)
+//      {
+//           cout<<ch<<" ";
+//      }
 
-     cout<<endl;
+//      cout<<endl;
      
-     return 0;
-}
+//      return 0;
+// }
 
 
 /*

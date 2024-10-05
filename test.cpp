@@ -99,7 +99,7 @@ void count(int arr[] , int n){
        
        for (int i = 0; i < n; i++)
        {
-            cout<<"element "<<arr[i]<<"is"<<arr1[arr[i]]<<"times"<<endl;
+            cout<<"element "<<arr[i]<<" is "<<arr1[arr[i]]<<"times"<<endl;
        }
        
 

@@ -134,7 +134,7 @@ using namespace std;
 
 // int main(){
 
-//    cout<<fibo(10);
+//    cout<<fibo(5);
 
 //     return 0;
 // }
@@ -144,40 +144,106 @@ using namespace std;
    check array sorted or not
 */
 
+// bool isSorted(int arr[] , int n , int i){
+        
+//         if (i == n-1)
+//         {
+//             return true;
+//         }
 
 
-bool isSorted(int arr[] , int n , int i){
+//         if (arr[i] > arr[i+1])
+//         {
+//                return false;
+//         }
+        
+//         isSorted(arr, n , i+1);
+        
 
-          if (i == n-1)
-          {
-              return true;
-          }
-          
+// }
 
-             if (arr[i] > arr[i+1])
-             {
-                 return false;
-             }
+
+   // int main(){
+
+   //  int arr[] = {1,2,3,4,5};
+
+   //  int n = sizeof(arr)/sizeof(arr[0]);
+
+   //  isSorted(arr,n,1);
+
+   //    return 0;
+   // }
+
+
+
+
+
+/*
+  waf to check first occurrence of an element in a  vector  
+*/
+
+
+#include<vector>
+// int firstoccurrence( vector <int> arr , int target , int i){
+
+//     if (i == arr.size())
+//     {
+//       return -1;
+//     }
+    
+       
+//              if (arr[i] == target)
+//              {
+//                   return i;
+//              }
              
           
-          isSorted( arr, n , i+1);
+//         return  firstoccurrence(arr,target,i+1);
+        
+// }
 
+//  int main(){
+
+//    vector<int> v1 = {1,2,3,3,3,4,5};
+
+//    int target = 3;
+   
+//    cout<<firstoccurrence(v1,target,0)<<endl;
+
+//     return 0;
+// }
+
+
+/*   WAF for last occurence  */
+
+
+int last(vector <int> v1 , int n , int target){
+       
+       if (n == 0)
+       {
+         return -1;
+       }
+
+       if (v1[n] == target)
+       {
+          return n;
+       }
+
+      return last(v1,n-1,target);
+       
+       
 }
-
 
 
 int main(){
       
-      int arr[] = {1,2,4,5};
+   vector<int> v1 = {1,2,3,3,3,4};
 
-      int n = sizeof(arr)/sizeof(arr[0]);
+   int n = v1.size();
+   
+   int target = 3;
 
-     if (isSorted(arr,n,1))
-     {
-         cout<<"array sorted";
-     }else
-        cout<<"un sorted";
-      
+    cout<<last(v1,n,target)<<endl;
 
-    return 0;
+   return 0;
 }
