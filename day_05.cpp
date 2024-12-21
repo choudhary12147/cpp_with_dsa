@@ -8,36 +8,30 @@
 #include<cmath>
 using namespace std;
 
-int main(){
+// int main(){
 
-        int n = 10829 ;
         
-        int digitsum = 0;
+//        int n  = 10829;
 
 
-      while (n > 0)
-      {
+//        int sum = 0;
 
+
+//        while (n > 0)
+//        {
           
+//               int last_digit = n%10;
+                  
+//                 sum += last_digit;
 
-          int lastdigit = n %10;
+//                 n/=10;
 
-             if (lastdigit %2 != 0)
-             {
-                  digitsum += lastdigit;
-             }
-            
+//        }
 
-          n/= 10;
-         
-      }
-
-      cout<<"sum of digit is "<<digitsum<<endl;
-      
-
-
-    return 0;
-}
+//        cout<<sum; 
+        
+//     return 0;
+// }
 
 
 /*   
@@ -47,28 +41,36 @@ int main(){
 */
 
 
-int main(){
+// int main(){
 
-         int n;
-        cout<<"enter the value of n"<<endl;
-         cin>>n;
+//       int n = 23567;
 
-       while (n > 0)
-       {
-           int last_digit = n %10;
-           
-           cout<<last_digit;
+//          int reverse = 0;
 
-           n/= 10;
+//       while (n>0)
+//       {  
+
+//           if (reverse>0)
+//           {
+//              reverse*=10;
+//           }
+          
+             
+//              int last_digit = n%10;
 
 
-       }
-       
+//              reverse+=last_digit;
+                
+//              n/=10;
 
+         
+//       }
 
-    return 0;
-}
+//       cout<<reverse;
+      
 
+//    return 0;
+// }
 
 /*
    Q.3 reverse a given number & print the result .
@@ -76,52 +78,57 @@ int main(){
 */
 
 
-int main(){
+// int main(){
+
+//     int n = 89342;
+
+//      int result = 0;
+      
+//     while (n>0)
+//     {
+        
             
-            int n;
-            cin>>n;
-            int result = 0;
-       
-       while (n > 0)
-       {
-           int  last_d = n%10;
-            
-            result =  result*10 + last_d;
+//            int last_digit = n%10;
 
-             n/= 10;
+//            result = result*10 + last_digit;
 
-       }
-       
-       cout<<result<<endl;
 
-    return 0;
-}
+//            n/=10;
+
+//     }
+
+//     cout<<result;
+    
+
+
+//    return 0;
+// }
 
 
 /*
     Q.4   WAP  where user can keep entering numbers till they enter a multiple of 10 
 */
 
-int main(){
+// int main(){
+
+//  int num ;
+
+//  while (num>0)
+//  {
+  
+//      cin>>num;
+//          if (num%10 == 0)
+//          {
+//             break;
+//          }
+//       cout<<num;   
+         
+//  }
+ 
+//    return 0;
+// }
     
-    int num ;
-      
-      while (1>0)
-      {
-        cin>>num;
 
-        cout<<"number is "<<num<<endl;
-
-       if (num%10 == 0)
-       {
-           break;
-       }
-       
-
-      } 
-     
-    return 0;
-}
 
 
 /*
@@ -129,105 +136,107 @@ int main(){
 */
 
 
-int main(){
-          
-          int num;
+// int main(){
 
-        do
-        {
-              cin>>num;
-            
-            if (num%10 == 0)
-            {
-                cout<<"enter number is multiple of 10"<<endl;
+//   int n;
 
-                continue;
-            }
-            
-            cout<<"number is "<<num<<endl;
+//  do
+//  {
+//      cin>>n;
 
+//      if (n%10 == 0)
+//      {
+//        cout<<"enter number is multiple of 10";
+//        cout<<n;
+//        continue;
+//      }
 
-        } while (1>0);
-        
-         
-    return 0;
-}
+//      cout<<n;
+     
+//  } while (n>0);
+ 
+     
+
+//    return 0;
+// }
 
 
 /*  Q.6  check if a number is prime or not   */
 
 
 
-int main(){
-       
-       int num ;
-       bool isprime = true;
-       cin>>num;
+// int main(){
 
-         if (num == 1)
-         {
-            isprime = false;
-         }
-         
-       for (int i = 2; i < num ; i++)
-       {
-              if ( num % i == 0)
-              {
-                   isprime = false;
-              }            
-               
-       }
-       
+//    int n;
+//    bool isprime =  true;
+//    cin>>n;
 
-      if (isprime == true)
-      {
-            cout<<"number is prime "<<endl;
-      }else
-      {
-        cout<<"number is not prime "<<endl;
-      }
+
+// if (n == 1)
+// {
+//     isprime = false;
+// }
+
+//    for (int i = 2; i < n; i++)
+//    {
+//         if (n%i == 0)
+//         {
+//           isprime = false;
+//         }
+        
+//    }
+
+//    if (isprime)
+//    {
+//        cout<<"yes prime";
+//    }
+//    else
+//    {
+//        cout<<"not a prime";
+//    }
       
 
-    return 0;
-}
+
+//    return 0;
+// }
 
 
 // Q.7 optimized the prime number check programe by using time complexitity
 
 
-int  main(){
+// int  main(){
         
-        int num ;
+//         int num ;
         
-        bool isprime = true;
+//         bool isprime = true;
     
-    cout<<"enter the number ";
-      cin>>num;
+//     cout<<"enter the number ";
+//       cin>>num;
      
-      for (int i = 2; i*i <= num; i++)
-      {
-           if (num % i == 0)
-           {
-               isprime = false;
-               break;
-           }
+//       for (int i = 2; i*i <= num; i++)
+//       {
+//            if (num % i == 0)
+//            {
+//                isprime = false;
+//                break;
+//            }
            
-      }
+//       }
       
 
 
-    if (isprime == true)
-    {
-        cout<<"number is prime"<<endl;
-    }
-    else
-    {
-        cout<<"number is not prime "<<endl;
-    }
+//     if (isprime == true)
+//     {
+//         cout<<"number is prime"<<endl;
+//     }
+//     else
+//     {
+//         cout<<"number is not prime "<<endl;
+//     }
     
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 
@@ -238,32 +247,24 @@ int  main(){
 
 
 
+// int main(){
 
-int main(){
-          
-          int n ;
-           
-           int fact = 1;
-           
-          cin>>n;
+//       int n ;
 
-          int fact1 = n;
+//       cin>>n;
 
-          for (int i = 1; i <= n ; i++)
-          {
-                 fact *= i;
+   
+//    int ans = 1;
+ 
+//     for (int i = 1; i <= n; i++)
+//     {
+//               ans =  ans*i;
+//     }
+    
+// cout<<ans;
 
-              
-                fact1  =   fact1*(n-i);  // for this method  i < n in for loop for check condition
-
-          }
-          
-     cout<<fact<<endl;
-
-     cout<<fact1<<endl;
-
-    return 0;
-}
+//    return 0;
+// }
 
 
 
@@ -275,23 +276,21 @@ int main(){
 */
 
 
+// int main(){
 
 
-int main(){
+//    int n = 10;
 
-         int num ;
+//    for (int i = 1; i <= 10; i++)
+//    {
+//       cout<<i*n<<"\n";
+//    }
+   
+//    return 0;
+// }
 
-         cin>>num;
 
-         for (int i = 1; i <= 10; i++)
-         {
-               int num1 = num * i ;
 
-               cout<<num1<<endl; 
-         }
-         
-    return 0;
-}
 
 
 
@@ -300,34 +299,52 @@ Question 10 : WAP to input a number and check whether the number is an Armstrong
          number or not.
 */
 
+// #include<cmath>  // using pow method
+
+// int main(){
+//    int num;
+//    cin>>num;
+
+//     int original = num;
+
+//    int temp = num;
+
+  
+
+//    int digit = 0;
+
+//    while (temp>0)
+//    {
+//         digit++;
+//         temp/=10;
+//    }
 
 
-int main(){
+//    int sum = 0;
 
-       int num;
-       cout<<"enter the number : "<<endl;
-       cin>>num;
-       int sumofcube = 0;
+//    while (num>0)
+//    {
+//         int last_digit = num%10;
+            
+//           sum = sum+ static_cast<int>(last_digit,digit);
 
-       while (num > 0)
-       {
-             int lastdigit = num%10;
-             
-             sumofcube += lastdigit*lastdigit*lastdigit;
-             
-             num /= 10;
+//           num/=10;
 
-       }
-        
-       if (sumofcube == num)
-       {
-          cout<<"number is armstrong"<<endl;
-       }else
-       {
-        cout<<"number is not a armstrong"<<endl;
-       }
-     
-}
+//    }
+
+//    if (sum == original)
+//    {
+//       cout<<"yes";
+//    }else
+//    {
+//       cout<<"no";
+//    }
+   
+
+//    return 0;
+// }
+
+
 
 /*
   Question 4 : For a positive N , WAP that prints all the prime numbers from 2 to N.
@@ -335,42 +352,106 @@ int main(){
 
 */
 
-int main(){
+
+
+// int main(){
+
+//       int N;
+//       cin>>N;
+
+
+
+
+//       for (int i = 2; i < N; i++)
+//       {
+
+//           bool is_prime = true;
+
+
+//          for (int j = 2; j < i; j++)
+//          {
+
+//             if (i%j == 0)
+//             {
+//                 is_prime = false;
+//                 break;
+//             }    
               
-              int n ;
-              cin>>n;
+//          }
 
 
-           for (int i = 2; i <= n; i++)
-           {
-              int curr = i;
+// if (is_prime)
+// {
+//    cout<<i<<" ";
+// }
 
-              bool isprime = true;
 
-              for (int j = 2 ; j*j <= curr; j++)
-              {
+
+//       }
+      
+
+
+//    return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int main(){
+              
+//               int n ;
+//               cin>>n;
+
+
+//            for (int i = 2; i <= n; i++)
+//            {
+//               int curr = i;
+
+//               bool isprime = true;
+
+//               for (int j = 2 ; j*j <= curr; j++)
+//               {
                 
-                 if (curr % j == 0)
-                 {
-                       isprime = false;  
-                 }
+//                  if (curr % j == 0)
+//                  {
+//                        isprime = false;  
+//                  }
                  
 
-              }
+//               }
                
-               if (isprime)
-               {
-                  cout<<" "<<curr;
-               }
+//                if (isprime)
+//                {
+//                   cout<<" "<<curr;
+//                }
                
 
          
 
-           }
+//            }
            
 
-    return 0;
-}
+//     return 0;
+// }
+
+
 
 
 /*
@@ -387,30 +468,65 @@ int main(){
 
 */
 
+
+
 int main(){
+
+   int n = 10;
+
+   int a  = 0;
+   int b = 1;
+
+   cout<<a<<" "<<b<<" ";
+
+   for (int i = 2; i < n; i++)
+   {
+        
+           int c = a+b;
+            cout<<c<<" ";
+
+             a = b;
+             b = c;
+   }
+   
+
+
+   return 0;
+}
+
+
+
+
+
+
+
+
+
+
+// int main(){
          
 
-         int n ;
-         cin>>n;
+//          int n ;
+//          cin>>n;
 
-        int a = 0;
-        int b = 1;
+//         int a = 0;
+//         int b = 1;
     
-       cout<<a<<" "<<b;
+//        cout<<a<<" "<<b;
 
     
-       for (int i = 2; i < n; i++)
-       {
-           int c = a+b;
+//        for (int i = 2; i < n; i++)
+//        {
+//            int c = a+b;
 
-           cout<<" "<<c;
+//            cout<<" "<<c;
            
-           a = b;
-           b = c;
+//            a = b;
+//            b = c;
 
 
-       }
+//        }
        
 
 
-}
+// }
