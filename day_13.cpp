@@ -64,42 +64,51 @@ using namespace std;
 // }
 
 
+/*
+   diagonal sum
+ 
+*/
 
-// int  diagonalsum(int matrix[4][4], int n){
 
-//      int sum = 0;
-   
-//       for (int i = 0; i < n; i++)
-//       {
-//          for (int j = 0; j < n; j++)
-//          {
-//               if (i == j)
-//               {
-//                  sum+= matrix[i][j];
-//               }else if ( j == n-i-1)
-//               {
-//                     sum+= matrix[i][j];
-//               }
-              
-              
-//          }
+void diagonal_sum(int m, int n , int arr[][3] ){
+
+
+    int sum = 0;
+    
+       for (int i = 0; i <= m; i++)
+       {
+         for (int j = 0; j <= n; j++)
+         {
+             if (i == j)
+             {
+                sum+=arr[i][j];  
+             }else if ( j == n-1)
+             {
+                  sum+=arr[i][j];
+             }
+             
+             
+         }
          
-//       }
+       }
+        
+        cout<<sum;
+    
+}
 
-//       cout<<sum<<endl;
-      
-//        return sum;
 
-// }
+int main(){
+        
+     int arr[][3] = {{1,2,3} ,{4,5,6} , {7,8,9}};  // 10+3+5+7  = 25
 
-// int main(){
+       diagonal_sum(2,2,arr);
+        
+         return 0;
 
-//     int matrix[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-          
-//       cout<<" sum of the diagonal is : "<<diagonalsum(matrix,4)<<endl;
-     
-//     return 0;
-// }
+}
+
+
+
 
 
 
@@ -185,47 +194,47 @@ using namespace std;
 */
 
 
-bool search(int mat[][4], int n , int m , int key){
+// bool search(int mat[][4], int n , int m , int key){
         
-        int i = 0 , j =  m -1;
+//         int i = 0 , j =  m -1;
 
-          while (i < n && j >= 0)
-          {
-               if (mat[i][j] == key)
-               {
-                     cout<<"element is at ("<<i<<","<<j<<")"<<endl;
-                     return true;
+//           while (i < n && j >= 0)
+//           {
+//                if (mat[i][j] == key)
+//                {
+//                      cout<<"element is at ("<<i<<","<<j<<")"<<endl;
+//                      return true;
 
-               }else if (mat[i][j] > key)
-               {
-                      j--;   
-                      //left
-               }else
-               {
-                   i++;
-                   //down
-               }
+//                }else if (mat[i][j] > key)
+//                {
+//                       j--;   
+//                       //left
+//                }else
+//                {
+//                    i++;
+//                    //down
+//                }
                
-         }
-         cout<<"key not found"<<endl;
-         return false;          
-}
+//          }
+//          cout<<"key not found"<<endl;
+//          return false;          
+// }
 
 
 
 
 
-int main(){
+// int main(){
 
-        int matrix[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+//         int matrix[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
            
-           int key = 10;
+//            int key = 10;
 
-          if (search(matrix,4,4,key))
-          {
-                 cout<<"element found"<<endl;
-          }  cout<<"element is not found"<<endl;
+//           if (search(matrix,4,4,key))
+//           {
+//                  cout<<"element found"<<endl;
+//           }  cout<<"element is not found"<<endl;
            
            
-    return 0;
-}
+//     return 0;
+// }
