@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -20,14 +21,27 @@ using namespace std;
 
 //  remove duplicates in string
 
-// void romove( string str , int i){
+void romove( string str , int i , int map [] , string ans){
 
-//        if (i == str.size())
-//        {
-//         /* code */
-//        }
+
+    char ch = str[i];
+
+    int mapidx = (int)(ch - 'a');
+
+
+         if (map[mapidx] != true)
+         {
+               ans+=ch;
+
+               map[mapidx] = true;
+         }
+         
+         
+         
+
+       remove( str , i+1);
        
-// }
+}
 
 
 
@@ -37,10 +51,15 @@ int main(){
 
     // cout<<tillingprob(5);
 
+   int map [26] = {false};
 
-    string name = "sunil";
+  string str = "shikhachahar";
 
-    cout<<name.size()<<endl;
+   string ans = "";
+ 
+   remove(str , 0 , map , ans);
+
+   cout<<ans<<endl;
 
     return 0;
 }

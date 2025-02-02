@@ -180,8 +180,6 @@ bool isPalindrom(char ch[] , int n){
             return false;
         }
         
-
-
        st++;
        end--;
     }

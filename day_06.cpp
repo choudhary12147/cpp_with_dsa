@@ -1,9 +1,9 @@
 /*  pattern  */
 
 
-// #include<iostream>
+#include<iostream>
 
-// using namespace std;
+using namespace std;
 
 /* Q.1 
           *
@@ -12,6 +12,12 @@
           * * * *
  
 */
+
+
+
+
+
+
 
 // int main(){
 //     int n = 4; // because there is 4 row and col

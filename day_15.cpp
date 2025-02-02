@@ -2,6 +2,19 @@
 #include<vector>
 using namespace std;
 
+
+// int main(){
+
+//     int *arr = new int[];
+
+//     cout<<
+
+//   return 0;
+// }
+
+
+
+
 // int main(){
 
 //   // dynamic memory alloction
@@ -305,60 +318,62 @@ using namespace std;
 */
 
 
-vector<int> findErrorsum( vector<int> &nums ){
+// vector<int> findErrorsum( vector<int> &nums ){
 
-      int n = nums.size();
+//       int n = nums.size();
 
-      vector<int> ans ;
+//       vector<int> ans ;
 
-        vector<bool> ispresent(n+1,false);
+//         vector<bool> ispresent(n+1,false);
 
           // this for loop calculate the duplicate element
 
-        for (int i = 0; i < n; i++)
-        {
-               if (ispresent[nums[i]])
-               {
-                  ans.push_back(nums[i]);
-               }else{
-                   ispresent[nums[i]] = true;
-               }
+        // for (int i = 0; i < n; i++)
+        // {
+        //        if (ispresent[nums[i]])
+        //        {
+        //           ans.push_back(nums[i]);
+        //        }else{
+        //            ispresent[nums[i]] = true;
+        //        }
 
                
-        }
+        // }
 
         //  this for loop calculate the miss element
 
-        for (int i = 1; i < n+1; i++)
-        {
-            if (!ispresent[nums[i]])
-            {
-                 ans.push_back(nums[i]);
-                 break;
-            }
+        // for (int i = 1; i < n+1; i++)
+        // {
+        //     if (!ispresent[nums[i]])
+        //     {
+        //          ans.push_back(nums[i]);
+        //          break;
+        //     }
             
-        }
+        // }
         
-        return ans;
+        // return ans;
             
 }
 
 
-int main(){
+// int main(){
 
-             vector<int> nums = {1,2,2,4};
-             vector<int> result = findErrorsum(nums);
+//              vector<int> nums = {1,2,2,4};
+//              vector<int> result = findErrorsum(nums);
 
-             for (int i = 0; i < result.size(); i++)
-             {
-                 cout<<result[i]<<" ";
-             }
+//              for (int i = 0; i < result.size(); i++)
+//              {
+//                  cout<<result[i]<<" ";
+//              }
              
   
-  return 0;
-}
+//   return 0;
+// }
 
 
 
 
 
+
+  
