@@ -2,6 +2,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+void getDetails(string str){
+     string sym = str.substr(0,4);
+     string expiry_data = str.substr(4,9);
+     cout<<sym<<endl;  
+     cout<<expiry_data<<endl; 
+     string data = str.substr(8,3);
+     cout<<data<<endl; 
+}
+
+
+
+
+
 int main(){
 
      //char
@@ -44,9 +59,42 @@ int main(){
 
 //     cout<<word;
 
-        char ch = 'e';
-         char ch1 =  ch- 'a' + 'A';
-           cout<<ch1<<endl;
+     //    char ch = 'e';
+     //     char ch1 =  ch- 'a' + 'A';
+     //       cout<<ch1<<endl;
+
+     //    char str1[] = "sunil";
+     //    char str2[] = "xyzzzz";
+   
+     //      cout<<strcmp(str1,str2)<<endl;
+
+
+     //     string str;
+       
+     //      getline(cin,str);
+     
+     //       cout<<str;
+  
+
+       string str [] = {"NIFT20MAY20242023CO.IN","NIFT24MAY20242023CO.INjh","NIFT14MAY20242023CO.IN"};
+
+         int n = sizeof(str)/sizeof(str[0]);
+         cout<<n<<endl;      
+       
+          for (int i = 0; i < n; i++)
+          {
+               getDetails(str[i]);    
+          }
+
+          char ch[] = "sunildhayaljksn";
+
+             string obj = "fhaylsunil";
+          cout<<obj.find("sunil");
+
+           
+
 
      return 0;
 }
+
+
